@@ -1,0 +1,37 @@
+<div class="form">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    </p>
+    <form action="" method="post">
+     <div layout="">
+        <md-input-container class="md-block" flex="100">
+          <label>Nome</label>
+          <input required>
+        </md-input-container>
+      </div>
+      <div layout="">
+        <md-input-container class="md-block" flex="50">
+          <label>Telefone</label>
+          <input required pattern="/^([0-9]{3}) [0-9]{5}-[0-9]{4}$/" title="(###) #####-####" />  >
+        </md-input-container>
+        <md-input-container class="md-block" flex="50">
+          <label>Celular</label>
+           <input required pattern="/^([0-9]{3}) [0-9]{5}-[0-9]{4}$/" title="(###) #####-####" />         
+        </md-input-container >
+        </div>
+      <div layout="">
+        <md-input-container class="md-block" flex="100">
+          <label>Endereço</label>
+          <input required>
+        </md-input-container>
+      </div>
+      <div layout="">
+      <md-input-container class="md-block" flex="100">
+          <label>E-mail</label>
+          <input required type="email">
+      </md-input-container>
+      </div>
+      <md-button type="submit" class="pull-right md-raised md-primary">Enviar</md-button>
+    </form>
+<div class="clearfix"></div>
+</div>

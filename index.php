@@ -12,6 +12,7 @@
 	<script src="libs/angular/angular-aria.min.js"></script>
 	<script src="libs/angular/angular-messages.min.js"></script>
 	<script src="libs/material/material.js"></script>
+	<script src="libs/mansory.js"></script>
 	<script src="app.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="libs/material/material.css"/>
@@ -23,6 +24,7 @@
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
 	<link rel="stylesheet" href="libs/css/style.css">
 </head>
 <body ng-controller="homeCtrl" ng-style="imagem">
@@ -36,13 +38,16 @@
 
     <md-toolbar>
       <md-fab-actions class="md-toolbar-tools">
+      	<md-button aria-label="Projetos" ng-href="#/">
+          #
+        </md-button>
         <md-button aria-label="Contato" ng-href="#contato">
           Contato
         </md-button>
         <md-button aria-label="Projetos" ng-href="#projetos">
           Projetos
         </md-button>
-        <md-button aria-label="photo" class="md-icon-button" ng-href="">
+        <md-button aria-label="photo" class="md-icon-button" ng-href="https://www.facebook.com/evandrodiego.erlo" target="_blank">
           <md-icon md-svg-src="icons/facebook2.svg"></md-icon>
         </md-button>
       </md-fab-actions>

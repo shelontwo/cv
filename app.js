@@ -1,5 +1,5 @@
   
-  var EvandroApp = angular.module('Evandro', ['ngRoute','ngMaterial']);
+  var EvandroApp = angular.module('Evandro', ['ngRoute','ngMaterial','ngMessages']);
 
  
   EvandroApp.config(function($routeProvider) {
@@ -8,12 +8,12 @@
         templateUrl : 'template/home.html',
         controller  : 'homeCtrl'
       })    
-      .when('/sobre', {
-        templateUrl : 'pages/sobre.html',
-        controller  : 'sobreCtrl'
+      .when('/projetos', {
+        templateUrl : 'template/projetos.html',
+        controller  : 'projetosCtrl'
       })    
       .when('/contato', {
-        templateUrl : 'pages/contato.html',
+        templateUrl : 'template/contato.html',
         controller  : 'contatoCtrl'
       });
   });
@@ -33,10 +33,18 @@
     }, 5000);
   });
 
-  EvandroApp.controller('sobreCtrl', function($scope) {
-    $scope.message = 'Look! I am an about page.';
+  EvandroApp.controller('projetosCtrl', function($scope) {      
+       $scope.mansory = function() {
+            console.log('s');
+            var $container = $('.projetos');
+            $container.packery({
+                itemSelector: '.item'
+            });
+      };
+      $scope.mansory();
   });
 
   EvandroApp.controller('contatoCtrl', function($scope) {
-    $scope.message = 'Contact us! JK. This is just a demo.';
+      $scope.showHints = true;
+
   });
